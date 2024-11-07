@@ -95,3 +95,13 @@ Run this in another terminal
 ```bash
 node server.js
 ```
+You can use the existing author and collaborator from db.json OR you can just sign up and create new.
+
+In db.json, 
+email for author is: author1@abc.com
+password for author is: password
+
+email for author is: collaborator1@abc.com
+password for author is: password
+
+Password is saved in db.json in hash that's why I am mentioning here.
