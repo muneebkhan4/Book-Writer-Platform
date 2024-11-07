@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Book Writer Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application provides a robust system for managing books and sections, allowing users to create, edit, and structure books with nested sections and subsections. The app supports collaborative editing by distinguishing between **Authors** and **Collaborators**, each with specific permissions.
 
-## Available Scripts
+## Core Functionalities
 
-In the project directory, you can run:
+### User Roles and Permissions
 
-### `npm start`
+- **Author**: The creator of the book. Can:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - Edit the book title, sections, and subsections.
+  - Add collaborators.
+  - Add new books.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Collaborator**: A collaborator can:
+  - Edit sections and subsections.
+  - Cannot change the book title, add other collaborators, or delete the book.
 
-### `npm test`
+### Book Creation and Editing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- An **Author** can create a new book, provide a title, and add sections with unlimited levels of nested subsections.
+- Both **Authors** and **Collaborators** can edit sections and subsections within books they have access to.
+- A **BookStructure** component enables section management with nested section rendering.
 
-### `npm run build`
+### Section Management
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Add, edit, delete, and organize sections and subsections within each book, including infinitely nested subsections.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Coding Style and Best Practices
 
-### `npm run eject`
+### 1. Component-based Architecture
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+We use **React functional components** to separate logic and UI into reusable, modular components. Components are divided into:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Presentational Components** (e.g., `Section.js`): Render the UI and handle user interactions.
+- **Container Components** (e.g., `CreateBook.js`, `EditBook.js`): Handle data fetching, state, and business logic.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Context API for State Management
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The **AuthContext** provides the current user data across components, ensuring role-based permissions are easily accessible.
 
-## Learn More
+### 3. State Management and Prop Drilling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **State Hooks**: `useState` is used extensively for local state within components, such as handling form inputs and dynamic sections.
+- **Prop Drilling**: Data and functions are passed as props from parent to child components, enabling section/subsection updates and recursive functionality.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Recursion for Nested Data Handling
 
-### Code Splitting
+Recursion in **`Section.js`** allows for an infinite level of nesting by recursively rendering subsections, enabling deeply nested book structures.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 5. RESTful API Integration
 
-### Analyzing the Bundle Size
+- **Fetch API**: CRUD operations are managed using fetch requests to `json-server`, a simple RESTful backend simulating API calls to `localhost:8000`.
+- **Data Validation**: Each data update or save action includes validation based on the user's role and authorization.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 6. Utility Functions for Complex Updates
 
-### Making a Progressive Web App
+We have utility functions in **`Section.js`** to handle updates to nested structures, such as updating titles or adding subsections within a deeply nested structure.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 7. Error Handling
 
-### Advanced Configuration
+- **Error Alerts**: Errors during API calls (e.g., creating/updating books) are handled using alerts and logging for developer visibility.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Clone the repository
 
-### `npm run build` fails to minify
+```bash
+git clone https://github.com/muneebkhan4/Book-Writer-Platform.git
+cd Book-Writer-Platform
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the application
+
+Start the app in development mode:
+
+Do this in one terminal
+
+```bash
+npm start
+```
+
+Run this in another terminal
+
+```bash
+node server.js
+```
