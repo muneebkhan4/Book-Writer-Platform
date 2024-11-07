@@ -99,12 +99,12 @@ You can use the existing author and collaborator from db.json OR you can just si
 
 In db.json,
 
-Email for author is: author1@abc.com
+Email for Author is: author1@abc.com
 
-Password for author is: password
+Password for Author is: password
 
-Email for author is: collaborator1@abc.com
+Email for Collaborator is: collaborator1@abc.com
 
-Password for author is: password
+Password for Collaborator is: password
 
 Password is saved in db.json in hash that's why I am mentioning here.
