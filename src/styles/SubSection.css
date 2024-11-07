@@ -1,0 +1,44 @@
+/* src/styles/SubSection.css */
+
+.subsection-container {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.subsection-title-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.add-sub-subsection-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-sub-subsection-btn:hover {
+  background-color: #218838;
+}
+
+.subsubsection-container {
+  margin-top: 10px;
+}
+
+.subsubsection-title-input {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

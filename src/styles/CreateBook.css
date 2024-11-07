@@ -1,0 +1,81 @@
+/* src/styles/CreateBook.css */
+
+/* Container for centering the content */
+.create-book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Card-style container for the form */
+.create-book-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Heading for Create Book */
+.create-book-card h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Input field for book title */
+.input-book-title {
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.input-book-title::placeholder {
+  color: #bbb;
+  font-size: 16px;
+}
+
+/* Save button container */
+.save-book-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Save Button */
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design: Stack inputs and buttons on smaller screens */
+@media (max-width: 480px) {
+  .create-book-card {
+    padding: 20px;
+  }
+
+  .input-book-title {
+    font-size: 14px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+  }
+}

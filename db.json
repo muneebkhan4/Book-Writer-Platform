@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "author1@abc.com",
+      "password": "$2a$10$U7gxPvWva1rBkeEVARrAquYJKzNIdrvI48hbB5mA.07sPOYlA/3zS",
+      "role": "Author"
+    },
+    {
+      "email": "author2@abc.com",
+      "password": "$2a$10$o.4.anEUoK/AjJ7I.WwYTeYJbeQa0bBLg6CP0cjj489Om79zYY6D2",
+      "role": "Author",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "email": "collaborator1@abc.com",
+      "password": "$2a$10$U7gxPvWva1rBkeEVARrAquYJKzNIdrvI48hbB5mA.07sPOYlA/3zS",
+      "role": "Collaborator"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "authorId": 1,
+      "title": "My Book 1",
+      "collaboratorIds": [],
+      "sections": [
+        {
+          "id": 1731017078921,
+          "title": "Level -1",
+          "subsections": [
+            {
+              "id": 1731017095644,
+              "title": "Level -2, 1",
+              "subsections": [
+                {
+                  "id": 1731017111104,
+                  "title": "Level -3",
+                  "subsections": []
+                }
+              ]
+            },
+            {
+              "id": 1731017117667,
+              "title": "Level -2, 2",
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "authorId": 2,
+      "title": "New Book 2",
+      "sections": [],
+      "collaboratorIds": [
+        3
+      ]
+    }
+  ]
+}

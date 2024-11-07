@@ -1,0 +1,61 @@
+/* src/styles/BookStructure.css */
+
+.book-structure-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.book-structure-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.empty-message {
+  font-size: 16px;
+  color: #888;
+}
+
+.add-section-container {
+  margin-top: 20px;
+}
+
+.add-section-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.add-section-btn:hover {
+  background-color: #45a049;
+}
+
+.save-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.save-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}

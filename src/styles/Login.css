@@ -1,0 +1,43 @@
+/* src/pages/Login.css */
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 16px;
+}
